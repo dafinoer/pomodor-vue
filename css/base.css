@@ -1,0 +1,20 @@
+.time {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.time {
+    font-size: 10vw
+}
+
+
+.time-screen {
+    display: flex;
+    flex-direction: row;
+}
+.landing-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}

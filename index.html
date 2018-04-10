@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .hal{
+            color: #FF9800
+        }
+
+        .hal:hover{
+            color:#F57C00
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <div class="landing-page">
+            <div class="time-screen">
+                <span class="time">{{minutes}}</span>
+                <span class="time">:</span>
+                <span class="time">{{second}}</span>
+            </div>
+            <a class="hal" v-on:click="play"><i class="fas fa-play fa-1x"></i></a>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <script src="js/base.js"></script>
+</body>
+</html>
