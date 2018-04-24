@@ -2,7 +2,7 @@ const myVue = new Vue({
     el:'#app',
     data:{
         time: null,
-        totalTime:(1 * 60),
+        totalTime:(25 * 60),
         resetButton:false
     },
     methods:{
@@ -22,11 +22,11 @@ const myVue = new Vue({
             clearInterval(this.time);
             this.time = null;
             this.resetButton = true
-            
+
         },
         reset:function(){
 
-            this.totalTime = (1 * 60);
+            this.totalTime = (25 * 60);
             clearInterval(this.time);
             this.time = null;
             this.resetButton = false;
