@@ -1,15 +1,30 @@
 const myVue = new Vue({
     el:'#app',
     data:{
-        waktu: null,
-        totalTime:(25 * 60)
+        time: null,
+        totalTime:(25 * 60),
+        resetButton:false
     },
     methods:{
         play:function(){
-            setInterval(() => this.countdown(), 1000);
+           this.time = setInterval(() => this.countdown(), 1000);
+           this.resetButton = true
         },
         countdown:function(){
+
             return this.totalTime--;
+        
+        },
+        stop:function(){
+            clearInterval(this.time);
+            this.time = null;
+            this.resetButton = true
+        },
+        reset:function(){
+            this.totalTime = (25 * 60);
+            clearInterval(this.time);
+            this.time = null;
+            this.resetButton = false;
         }
     },
     computed:{

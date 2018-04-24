@@ -27,7 +27,20 @@
                 <span class="time">:</span>
                 <span class="time">{{second}}</span>
             </div>
-            <a class="hal" v-on:click="play"><i class="fas fa-play fa-1x"></i></a>
+
+            <div class="button-play">
+                    <div v-if="time == null" v-on:click="play">
+                        <img src="img/ic_play_circle_outline_black_24dp_1x.png" alt="">
+                    </div>
+            
+                    <div v-if="time != null" v-on:click="stop">
+                        <img src="img/ic_pause_circle_outline_black_24dp_1x.png" alt="">
+                    </div>
+            
+                    <div v-if="resetButton" @click="reset">
+                        <img src="img/ic_replay_black_24dp_1x.png" alt="">
+                    </div>            
+            </div>
         </div>
     </div>
     
